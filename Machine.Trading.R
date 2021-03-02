@@ -33,7 +33,7 @@ colnames(sym.all) <- cbind('ret.sym', 'ret.sym1', 'ret.sym2', 'ret.sym3', 'ret.s
 sym.all <- sym.all[complete.cases(sym.all),]
 
 # Training Range
-sym.t <- window(sym.all, end='2018-01-01')
+sym.t <- window(sym.all, start='2017-01-01', end=date-1)
 
 # Machine Trading Models
 
@@ -58,7 +58,7 @@ MT.sym <- train(ret.sym~ret.sym1+ret.sym2+ret.sym3+ret.sym4+ret.sym5+ret.sym6+re
 
 #Trading Range
 
-sym.i <- window(sym.all, start='2017-01-01')
+sym.i <- window(sym.all, start='2019-01-01')
 
 #Trading Strategy
 MT.sym.mi <- predict(MT.sym,newdata=sym.i)
