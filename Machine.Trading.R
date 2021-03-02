@@ -9,8 +9,6 @@ library("tseries")
 library("xgboost")
 library(randomForest)
 library(mgcv)
-library(Quandl)
-Quandl.api_key("fn-jfrd1jkpKosDRQFsA")
 
 getSymbols('DIS')
 sym <- DIS$DIS.Adjusted
