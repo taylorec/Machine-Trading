@@ -92,6 +92,5 @@ charts.PerformanceSummary(tail(MTmcomp, 10))
 quantile(MT.sym.mret, probs=0.05)
 quantile(ret.sym, probs=0.05)
 
-# Sum of Correlations
-sum(cor(sym.all))
+
 
